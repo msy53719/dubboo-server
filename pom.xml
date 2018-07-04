@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mock.server</groupId>
+	<artifactId>mock-server</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>mock-service</module>
+		<module>mock-web</module>
+	</modules>
+
+	<properties>
+		<spring.version></spring.version>
+		<sourceEncoding>UTF-8</sourceEncoding>
+		<java.version>1.8</java.version>
+		<dubbo.version>2.6.2</dubbo.version>
+		<sping.version></sping.version>
+		<zkclient.version>0.10</zkclient.version>
+		<dubbo.springboot>2.0.0</dubbo.springboot>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>com.mock.server</groupId>
+				<artifactId>mock-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba.spring.boot</groupId>
+				<artifactId>dubbo-spring-boot-starter</artifactId>
+				<version>${dubbo.springboot}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.101tec</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+
+	</build>
+
+</project>
